@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FCABB933-6D71-4B7B-B96E-42AB21BECD14}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Common</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\x86\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)Build\x86\$(Configuration)\</IntDir>
+    <TargetExt>.lib</TargetExt>
+    <IncludePath>$(CUDAToolkitDir)\include;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x86;$(DXSDK_DIR)Lib\x86;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CUDAToolkitDir)\include;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x64;$(DXSDK_DIR)Lib\x64;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\x86\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)Build\x86\$(Configuration)\</IntDir>
+    <TargetExt>.lib</TargetExt>
+    <IncludePath>$(CUDAToolkitDir)\include;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x86;$(DXSDK_DIR)Lib\x86;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(CUDAToolkitDir)\include;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x64;$(DXSDK_DIR)Lib\x64;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NO_REFERENCE_OPT;NO_OBS;NO_OBSIDIAN;NO_ACCELERATOR_OPT;NO_CUDA;NO_CUDA_OPT;_CRT_SECURE_NO_DEPRECATE;NO_STATIC_DATA;NO_OPEN_CL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetFileName) $(SolutionDir)Lib\x86_$(TargetFileName)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NO_STATIC_DATA;NO_OPEN_CL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetFileName) $(SolutionDir)Lib\x64_$(TargetFileName)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NO_OBSIDIAN;NO_OBS;NO_OBS_OPT;_CRT_SECURE_NO_DEPRECATE;NO_OPEN_CL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetFileName)" "$(SolutionDir)Lib\x86_$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NO_STATIC_DATA;NO_OPEN_CL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetFileName) $(SolutionDir)Lib\x64_$(TargetFileName)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1D.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DBool.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat4.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DInt.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2D.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DBool.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat4.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DInt.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\DataStore.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\StaticData.h" />
+    <ClInclude Include="..\..\Inc\Common\DataArrays.h" />
+    <ClInclude Include="..\..\Inc\Common\FFI.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelAccelerator.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelCode.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelCUDA.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelCUDADriver.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelHaskell.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelOpenCL.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelProcessor.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelReference.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelScript.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelSystem.h" />
+    <ClInclude Include="..\..\Inc\Common\Timings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1D.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DBool.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DFloat.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DFloat4.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DInt.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2D.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DBool.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DFloat.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DFloat4.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DInt.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\DataStore.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\StaticData.cpp" />
+    <ClCompile Include="..\..\Inc\Common\ParallelAccelerator.cpp" />
+    <ClCompile Include="..\..\Inc\Common\ParallelCUDA.cpp" />
+    <ClCompile Include="..\..\Inc\Common\ParallelCUDADriver.cpp" />
+    <ClCompile Include="..\..\Inc\Common\ParallelHaskell.cpp" />
+    <ClCompile Include="..\..\Inc\Common\ParallelOpenCL.cpp" />
+    <ClCompile Include="..\..\Inc\Common\ParallelReference.cpp" />
+    <ClCompile Include="..\..\Inc\Common\ParallelSystem.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Timings.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

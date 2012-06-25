@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\Projects\Molecules\Main.cpp" />
+    <ClCompile Include="..\..\Inc\Common\RunTest.cpp">
+      <Filter>Common\Targets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\MoleculesCached.cpp">
+      <Filter>Cached</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\MoleculesAccelerator.cpp">
+      <Filter>Accelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\MoleculesAccelerator2.cpp">
+      <Filter>Accelerator 2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\MoleculesCUDA.cpp">
+      <Filter>CUDA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\MoleculesOptimised.cpp">
+      <Filter>Optimised</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\MoleculesReference.cpp">
+      <Filter>Reference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\Atoms.cpp">
+      <Filter>Molecules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\Grid.cpp">
+      <Filter>Molecules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Projects\Molecules\Source\Molecules.cpp">
+      <Filter>Molecules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MoleculesHaskell.cpp">
+      <Filter>Haskell</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Projects\Molecules\Main.h" />
+    <ClInclude Include="..\..\Inc\Common\DataArrays.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelCode.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelProcessor.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelSystem.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Timings.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DInt.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1D.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DBool.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat4.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DInt.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2D.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DBool.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat4.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\DataStore.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\StaticData.h">
+      <Filter>Common\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelAccelerator.h">
+      <Filter>Common\Templates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelReference.h">
+      <Filter>Common\Templates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelCUDA.h">
+      <Filter>Common\Templates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelOpenCL.h">
+      <Filter>Common\Templates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Templates\CommonProcess.h">
+      <Filter>Common\Targets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Templates\CommonProcess2D.h">
+      <Filter>Common\Targets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\RunTest.h">
+      <Filter>Common\Targets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\MoleculesCached.h">
+      <Filter>Cached</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\MoleculesAccelerator.h">
+      <Filter>Accelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\MoleculesAccelerator2.h">
+      <Filter>Accelerator 2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\MoleculesCUDA.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\MoleculesOptimised.h">
+      <Filter>Optimised</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\MoleculesReference.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\Grid.h">
+      <Filter>Molecules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\Atoms.h">
+      <Filter>Molecules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Projects\Molecules\Source\Molecules.h">
+      <Filter>Molecules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MoleculesHaskell.h">
+      <Filter>Haskell</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Accelerator">
+      <UniqueIdentifier>{7acf61bf-2a9d-44a3-987d-0d39df8585c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Accelerator 2">
+      <UniqueIdentifier>{b3f540a2-2477-4e54-a31e-e709224c364b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cached">
+      <UniqueIdentifier>{3b51b398-eee3-40b9-9a94-e14d0d168bb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{93f984a6-c0b4-45de-88d1-46f3c72c342c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CUDA">
+      <UniqueIdentifier>{2ef083d9-13f8-4a53-bf7d-5d1dc3897597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimised">
+      <UniqueIdentifier>{2d57dba3-aa4f-4968-a0ce-f7051dcef541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Reference">
+      <UniqueIdentifier>{64bbf85b-15b5-420e-9f5b-cb9f3cbb5db3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Arrays">
+      <UniqueIdentifier>{9d93d915-00d2-4719-99e5-ee758188d282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Targets">
+      <UniqueIdentifier>{3c303f4c-6ba1-4b97-8394-d3629e486065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Templates">
+      <UniqueIdentifier>{732d7c2d-b604-4d12-aaa1-024adf7f59f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Molecules">
+      <UniqueIdentifier>{a8bd4ceb-b583-4a3b-8a34-8d738a10e6b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Haskell">
+      <UniqueIdentifier>{e2f80509-abd3-470d-93cb-aff86bd114f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\..\Projects\Molecules\Source\MoleculesCUDA.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

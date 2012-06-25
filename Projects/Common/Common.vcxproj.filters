@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Accelerator">
+      <UniqueIdentifier>{917fea56-f997-4513-b123-888b5d88c2bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arrays">
+      <UniqueIdentifier>{b5eb7f71-88bb-4c46-bd3a-f7e34e8242fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CUDA">
+      <UniqueIdentifier>{89a8aa9d-088e-4e6d-8e46-1d760d07fe14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenCL">
+      <UniqueIdentifier>{6e58556a-f260-40cc-84b6-0888c29e667b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Reference">
+      <UniqueIdentifier>{34c2c4a7-7a57-4c7b-8e48-1276d34ada19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Haskell">
+      <UniqueIdentifier>{13dccdbe-5e64-45c0-b08a-09fb9af1d3e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DInt.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1D.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DBool.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat4.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DInt.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2D.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DBool.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat4.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelAccelerator.h">
+      <Filter>Accelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelCUDA.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelOpenCL.h">
+      <Filter>OpenCL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelReference.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\DataArrays.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelCode.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelProcessor.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelSystem.h" />
+    <ClInclude Include="..\..\Inc\Common\Timings.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\StaticData.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\Arrays\DataStore.h">
+      <Filter>Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelCUDADriver.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelScript.h" />
+    <ClInclude Include="..\..\Inc\Common\FFI.h">
+      <Filter>Haskell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Inc\Common\ParallelHaskell.h">
+      <Filter>Haskell</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1D.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DBool.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DFloat.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DFloat4.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data1DInt.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2D.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DBool.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DFloat.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DFloat4.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\Data2DInt.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\ParallelAccelerator.cpp">
+      <Filter>Accelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\ParallelCUDA.cpp">
+      <Filter>CUDA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\ParallelOpenCL.cpp">
+      <Filter>OpenCL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\ParallelReference.cpp">
+      <Filter>Reference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\ParallelSystem.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Timings.cpp" />
+    <ClCompile Include="..\..\Inc\Common\Arrays\StaticData.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\Arrays\DataStore.cpp">
+      <Filter>Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\ParallelCUDADriver.cpp">
+      <Filter>CUDA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Inc\Common\ParallelHaskell.cpp">
+      <Filter>Haskell</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

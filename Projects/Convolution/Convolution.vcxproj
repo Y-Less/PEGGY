@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1E926BCD-61FB-4B0E-8885-BC311A9BC5D6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Acc2</RootNamespace>
+    <ProjectName>Convolution</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 4.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CUDAToolkitDir)\include;D:\benchmarks\Comparisons\Inc\Common;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x86;$(DXSDK_DIR)Lib\x86;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\x86\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)Build\x86\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CUDAToolkitDir)\include;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x64;$(DXSDK_DIR)Lib\x64;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;$(LibraryPath);$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(CUDAToolkitDir)\include;D:\benchmarks\Comparisons\Inc\Common;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x86;$(DXSDK_DIR)Lib\x86;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\x86\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)Build\x86\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(CUDAToolkitDir)\include;$(ACCELERATOR_V2)Include;$(DXSDK_DIR)Include;$(NVSDKCOMPUTE_ROOT)\CUDALibraries\common\inc;$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ACCELERATOR_V2)bin\x64;$(DXSDK_DIR)Lib\x64;C:\Program Files (x86)\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NO_OPEN_CL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Inc\Common;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cuda.lib;cudart.lib;Accelerator.lib;cudatarget.lib;x86_Common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(CudaToolkitLibDir);$(SolutionDir)Lib</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <Include>
+      </Include>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NO_STATIC_DATA;NO_OPEN_CL;NO_CUDA_OPT;WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Inc\Common;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cuda.lib;cudart.lib;Accelerator.lib;cudatarget.lib;x64_Common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(CUDA_LIB_PATH);$(SolutionDir)Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>
+      </Include>
+    </CudaCompile>
+    <PostBuildEvent>
+      <Command>echo Creating IO folders...
+mkdir "$(OutDir)Output"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NO_OBSIDIAN;NO_OBS;NO_OBS_OPT;_CRT_SECURE_NO_DEPRECATE;NO_OPEN_CL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Inc\Common;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>cuda.lib;cudart.lib;Accelerator.lib;cudatarget.lib;x86_Common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(CudaToolkitLibDir);$(SolutionDir)Lib;D:\benchmarks\Comparisons\Lib</AdditionalLibraryDirectories>
+      <LargeAddressAware>true</LargeAddressAware>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <CLRImageType>Default</CLRImageType>
+    </Link>
+    <CudaCompile>
+      <Include>
+      </Include>
+      <CodeGeneration>compute_10,sm_10</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NO_STATIC_DATA;NO_OPEN_CL;NO_CUDA_OPT;WIN32;_CRT_SECURE_NO_DEPRECATE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Inc\Common;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>cuda.lib;cudart.lib;Accelerator.lib;cudatarget.lib;x64_Common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(CUDA_LIB_PATH);$(SolutionDir)Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>
+      </Include>
+    </CudaCompile>
+    <PostBuildEvent>
+      <Command>echo Creating IO folders...
+mkdir "$(OutDir)Output"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Inc\Common\RunTest.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Source\Convolver.cpp" />
+    <ClCompile Include="Source\ConvolverAccelerator.cpp" />
+    <ClCompile Include="Source\ConvolverAccelerator2.cpp" />
+    <ClCompile Include="Source\ConvolverCached.cpp" />
+    <ClCompile Include="Source\ConvolverCUDA.cpp" />
+    <ClCompile Include="Source\ConvolverCUDA2.cpp" />
+    <ClCompile Include="Source\ConvolverCUDADriver.cpp" />
+    <ClCompile Include="Source\ConvolverHaskell.cpp" />
+    <ClCompile Include="Source\ConvolverObs.cpp" />
+    <ClCompile Include="Source\ConvolverObsOpt.cpp" />
+    <ClCompile Include="Source\ConvolverOptimised.cpp" />
+    <ClCompile Include="Source\ConvolverReference.cpp" />
+    <ClCompile Include="Source\Filter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1D.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DBool.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DFloat4.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data1DInt.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2D.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DBool.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DFloat4.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\Data2DInt.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\DataStore.h" />
+    <ClInclude Include="..\..\Inc\Common\Arrays\StaticData.h" />
+    <ClInclude Include="..\..\Inc\Common\DataArrays.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelAccelerator.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelCode.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelCUDA.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelOpenCL.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelProcessor.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelReference.h" />
+    <ClInclude Include="..\..\Inc\Common\ParallelSystem.h" />
+    <ClInclude Include="..\..\Inc\Common\RunTest.h" />
+    <ClInclude Include="..\..\Inc\Common\Templates\CommonProcess.h" />
+    <ClInclude Include="..\..\Inc\Common\Templates\CommonProcess1D.h" />
+    <ClInclude Include="..\..\Inc\Common\Templates\CommonProcess2D.h" />
+    <ClInclude Include="..\..\Inc\Common\Timings.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="Source\Convolver.h" />
+    <ClInclude Include="Source\ConvolverAccelerator.h" />
+    <ClInclude Include="Source\ConvolverAccelerator2.h" />
+    <ClInclude Include="Source\ConvolverCached.h" />
+    <ClInclude Include="Source\ConvolverCUDA.h" />
+    <ClInclude Include="Source\ConvolverCUDA2.h" />
+    <ClInclude Include="Source\ConvolverCUDADriver.h" />
+    <ClInclude Include="Source\ConvolverHaskell.h" />
+    <ClInclude Include="Source\ConvolverObs.h" />
+    <ClInclude Include="Source\ConvolverObsOpt.h" />
+    <ClInclude Include="Source\ConvolverOptimised.h" />
+    <ClInclude Include="Source\ConvolverReference.h" />
+    <ClInclude Include="Source\Filter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="Source\ConvolverCUDA.cu">
+      <NvccCompilation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compile</NvccCompilation>
+    </CudaCompile>
+    <CudaCompile Include="Source\ConvolverCUDA2.cu" />
+    <CudaCompile Include="Source\ConvolverCUDADriver.cu">
+      <NvccCompilation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ptx</NvccCompilation>
+      <CompileOut Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Bin\x86\$(Configuration)\$(ProjectName)\%(Filename).ptx</CompileOut>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_20,sm_20</CodeGeneration>
+    </CudaCompile>
+    <CudaCompile Include="Source\ConvolverObs.cu" />
+    <CudaCompile Include="Source\ConvolverObsOpt.cu">
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_10,sm_10</CodeGeneration>
+    </CudaCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 4.2.targets" />
+  </ImportGroup>
+</Project>

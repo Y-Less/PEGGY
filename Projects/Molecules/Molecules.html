@@ -1,0 +1,54 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<div id="introduction">
+			<h1>Introduction</h1>
+			<p>This project contains specific code for comparing electrostatic charge map implementations.</p>
+		</div>
+		<div id="boptions">
+			<h1>Build Options</h1>
+			<p>Note that not all of these options have been fully tested in all combinations.  If you find a problem combinations please inform Alex Cole (t-alcole).  Also note that you will need to rebuild "Common" with the same parameters to use these properly.</p>
+			<ul>
+				<li><span class="opt_name">NO_ACCELERATOR</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the Accelerator target from the build.  Note that this project uses Float4 so requires at least one Acclerator target.</span></li>
+				<li><span class="opt_name">NO_ACCELERATOR_OPT</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the optimised Accelerator target from the build.  Note that this project uses Float4 so requires at least one Acclerator target.</span></li>
+				<li><span class="opt_name">NO_CUDA</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the CUDA target from the build.</span></li>
+				<li><span class="opt_name">NO_CUDA_OPT</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the optimised CUDA target from the build.  Note that this is not supported at all in the Molecules project as there is no optimised CUDA code.</span></li>
+				<li><span class="opt_name">NO_OPEN_CL</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the OpenCL target from the build.</span></li>
+				<li><span class="opt_name">NO_REFERENCE</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the Reference (CPU) target from the build.</span></li>
+				<li><span class="opt_name">NO_REFERENCE_OPT</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the optimised Reference (CPU) targets (most have two versions) from the build.</span></li>
+				<li><span class="opt_name">NO_STATIC_DATA</span><span class="opt_sep"> - </span><span class="opt_desc">When generating arrays of input data, a number of methods can be used, including random, 0s and pre-set data.  Using the pre-set data may make the executable huge, so can be excluded using this switch.</span></li>
+			</ul>
+		</div>
+		<div id="loptions">
+			<h1>Launch Options</h1>
+			<p>This program takes five options, all passed in order.</p>
+			<ul>
+				<li>X grid size index (0 - 30).  Determines the x size of the grid to operate on, based on the values in the array in Main.cpp</li>
+				<li>Y grid size index (0 - 30).  Determines the y size of the grid to operate on, based on the values in the array in Main.cpp</li>
+				<li>Atom count.  Number of atoms to place within the grid.</li>
+				<li>Targets.  Which targets to run the test on.  Options are (not all may be supported):
+					<ul>
+						<li>a - DX9</li>
+						<li>b - DX9 Optimised</li>
+						<li>c - CUDA</li>
+						<li>d - CUDA Optimised</li>
+						<li>e - Cached (Reference Optimised)</li>
+						<li>f - Fast (Reference Optimised 2)</li>
+						<li>r - Reference</li>
+						<li>o - OpenCL</li>
+						<li>x - X64</li>
+						<li>y - X64 Optimised</li>
+					</ul>
+				</li>
+				<li>Experiments.  Which experiments to run.  Options are (note that using "S" over "C" is recommended):
+					<ul>
+						<li>s - Setup.  Run all selected targets multiple times and time the results.  This mode includes all data copying in the results.</li>
+						<li>c - Clean.  Run all selected targets multiple times and time the results.  This mode does not include data copying where possible in the results.</li>
+						<li>v - Verify.  Run all selected targets once and compare their results.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

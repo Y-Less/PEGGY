@@ -1,0 +1,24 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<div id="introduction">
+			<h1>Introduction</h1>
+			<p>This project contains code common to all projects built under this test framework, such as array abstractions and testing code.  Note that this project directly relies on the Accelerator project and so will build that first automatically.</p>
+		</div>
+		<div id="boptions">
+			<h1>Build Options</h1>
+			<p>Note that not all of these options have been fully tested in all combinations.  If you find a problem combinations please inform Alex Cole (t-alcole).  Also note that you will need to rebuild "Common" with the same parameters to use these properly.</p>
+			<ul>
+				<li><span class="opt_name">NO_ACCELERATOR</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the Accelerator target from the build.</span></li>
+				<li><span class="opt_name">NO_ACCELERATOR_OPT</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the optimised Accelerator target from the build.</span></li>
+				<li><span class="opt_name">NO_CUDA</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the CUDA target from the build.</span></li>
+				<li><span class="opt_name">NO_CUDA_OPT</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the optimised CUDA target from the build.</span></li>
+				<li><span class="opt_name">NO_OPEN_CL</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the OpenCL target from the build.</span></li>
+				<li><span class="opt_name">NO_REFERENCE</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the Reference (CPU) target from the build.</span></li>
+				<li><span class="opt_name">NO_REFERENCE_OPT</span><span class="opt_sep"> - </span><span class="opt_desc">Exclude the optimised Reference (CPU) targets (most have two versions) from the build.</span></li>
+				<li><span class="opt_name">NO_STATIC_DATA</span><span class="opt_sep"> - </span><span class="opt_desc">When generating arrays of input data, a number of methods can be used, including random, 0s and pre-set data.  Using the pre-set data may make the executable huge, so can be excluded using this switch.  Note that the inclusion of this data is the main reason for "Common" being a separate project to reduce regular build times.</span></li>
+			</ul>
+		</div>
+	</body>
+</html>
