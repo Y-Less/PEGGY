@@ -57,8 +57,8 @@ echo Building dll
 ::ghc -c load.c
 ::ghc -c "%filename%.hs"
 ::ghc -shared -o "%filename%.dll" -shared -static
-::ghc load.c --make "%filename%.hs" -hide-package monads-fd -no-hs-main -o "%filename%.dll" -shared -static
-ghc load.c --make "%filename%.hs" -no-hs-main -o "%filename%.dll" -shared -static
+ghc load.c --make "%filename%.hs" -hide-package monads-fd -no-hs-main -o "%filename%.dll" -shared -static
+::ghc load.c --make "%filename%.hs" -no-hs-main -o "%filename%.dll" -shared -static
 :: Constrain exports.
 ::-optdll--def 0optdll%filename%.def
 

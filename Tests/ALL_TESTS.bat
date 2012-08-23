@@ -10,8 +10,8 @@ FOR /L %%i IN (0,1,63) DO (
 		echo =========
 		echo  %%i X 31
 		echo =========
-		Convolution.exe 31 %%i 5 acrfxk c
-		move "Output\Report2 31 %%i.txt" "Output\Report4 31 %%i 5 c.txt"
+		Convolution.exe %%i 31 5 acrfxk c
+		move "Output\Report2 %%i 31.txt" "Output\Report4 %%i 31 5 c.txt"
 	)
 )
 

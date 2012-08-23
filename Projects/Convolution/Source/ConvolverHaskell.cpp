@@ -95,6 +95,7 @@ void
 			(void *)&m_data,
 			(void *)&m_smoothX,
 		};
+	//printf("%d %d\n", width, height);
 	TryCUDA(cuLaunchKernel(m_rowKernel, CEILDIV((int)width, SHAPE_X), CEILDIV((int)height, SHAPE_Y), 1, SHAPE_X, SHAPE_Y, 1, 0, 0, params0, 0));
 	//DoRows(m_smoothX, m_data, (int)height, (int)width, GetThreads(), (int)pitch, (int)radius);
 	End("X");
@@ -108,7 +109,7 @@ void
 			(void *)&m_smoothX,
 			(void *)&m_smoothY,
 		};
-	TryCUDA(cuLaunchKernel(m_colKernel, CEILDIV((int)height, SHAPE_X), CEILDIV((int)width, SHAPE_Y), 1, SHAPE_X, SHAPE_Y, 1, 0, 0, params1, 0));
+	TryCUDA(cuLaunchKernel(m_colKernel, CEILDIV((int)width, SHAPE_X), CEILDIV((int)height, SHAPE_Y), 1, SHAPE_X, SHAPE_Y, 1, 0, 0, params1, 0));
 	// Convert the data back.
 	End("Y");
 	//cudaThreadSynchronize();
